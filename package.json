@@ -1,0 +1,28 @@
+{
+  "name": "slides",
+  "version": "0.0.1",
+  "description": "Slides for presentations",
+  "main": "index.js",
+  "dependencies": {
+    "reveal-md": "0.0.24"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "reveal-md --disableAutoOpen --port ${PORT-4000}",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/duksis/slides.git"
+  },
+  "keywords": [
+    "Elixir",
+    "Presentations"
+  ],
+  "author": "Hugo Duksis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duksis/slides/issues"
+  },
+  "homepage": "https://github.com/duksis/slides#readme"
+}
