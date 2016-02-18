@@ -5,19 +5,21 @@
 
 ## Why?
 
-* We need it
-* It is easy **
-
-** but there is always a but
+* Elixir/We need it
+* It is easy
 
 ---
 
-## We need it
+## We need it 1/3
 
 * We know that Elixir is amazing for building:
   * Fault tolerant
   * Distributed
   * Massively scalable applications
+
+---
+
+## We need it 2/3
 
 * But what if you don't really feel the need for such applications? (yet)
   * you still most likely have plenty of problems that could be solved with Elixir
@@ -29,7 +31,22 @@ Or might just want to contribute to the Ecosystem
 
 ---
 
+## We need it 3/3
+
+* There is a gem for everything (Ruby)
+* Elixir can be more productive (but not without the ecosystem)
+
+---
+
 ## It is easy!!.?
+
+* There are plenty of examples (check out hex.pm)
+* Very responsive comunity on StackOverflow, irc and mailinglists
+* Does not really take that much time
+
+---
+
+## Before starting to code
 
 * Deciding how you want the interface to look like
   * Search for inspiration and use what you like most
@@ -54,11 +71,12 @@ https://docs.travis-ci.com/api
 * new mix project
 `mix new travis_ex`
 
-* update the README with what you want to achieve
+## update the README with what you want to achieve
 
 ```iex
-iex> client = TravisEx.Client.new(auth: "bb1568179c33308f4da7dceab")
-iex> %{"repo" => %{"last_build_state" => build_state}} = TravisEx.Repos.get "duksis/travis_ex", client
+iex> client = TravisEx.Client.new(auth: "b1568179c33308f4da7dceab")
+iex> %{"repo" => %{"last_build_state" => build_state}} = \
+    TravisEx.Repos.get("duksis/travis_ex", client)
 iex> build_state #=> "passed"
 ```
 
@@ -80,7 +98,7 @@ iex> build_state #=> "passed"
 
 ---
 
-## Lets start with a simple client
+## Lets start with a simple "client"
 
 ```elixir
 defmodule TravisEx.Client do
@@ -100,7 +118,7 @@ end
 
 ---
 
-## And move on to actually working with an API entity
+## And move on to a endpoint
 
 ```elixir
 defmodule TravisEx.Repos do
@@ -132,14 +150,15 @@ end
 ## Add package info
 
 ```elixir
-  defp package do
-    [
-      files: ["lib", "mix.exs", "README*", "LICENSE*"],
-      maintainers: ["Hugo Duksis"],
-      licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/duksis/travis_ex"}
-    ]
-  end
+# mix.exs
+defp package do
+  [
+    files: ["lib", "mix.exs", "README*", "LICENSE*"],
+    maintainers: ["Hugo Duksis"],
+    licenses: ["MIT"],
+    links: %{"GitHub" => "https://github.com/duksis/travis_ex"}
+  ]
+end
 ```
 
 push it to hex:
@@ -150,13 +169,30 @@ mix hex.publish
 
 and we have a working client library covering one endpoint
 
-Note:
+---
 
-Options
-  * Heroku scale api
-  * Bitbucket
+## After the basics
+
+* Full API coverage
+* Full test coverage (vcr, json_schema)
+* Documentation
+* Maintain it!
+
+* Automatic pagination (streams)
+* Handling oauth handshakes
 
 ---
 
+## Advanced topics
+
+Building client libraries automatically from:
+  * json schema
+  * from the root of hypermedia API
+
+---
+
+## Q&A
+
+---
 
 ## The END
