@@ -62,6 +62,7 @@ iex> %{"repo" => %{"last_build_state" => build_state}} = TravisEx.Repos.get "duk
 iex> build_state #=> "passed"
 ```
 
+---
 
 ## Add dependencies
 
@@ -76,6 +77,8 @@ iex> build_state #=> "passed"
     ]
   end
 ```
+
+---
 
 ## Lets start with a simple client
 
@@ -94,6 +97,8 @@ defmodule TravisEx.Client do
   end
 end
 ```
+
+---
 
 ## And move on to actually working with an API entity
 
@@ -121,6 +126,8 @@ defmodule TravisEx.Repos do
   end
 end
 ```
+
+---
 
 ## Add package info
 
