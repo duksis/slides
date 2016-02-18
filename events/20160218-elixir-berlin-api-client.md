@@ -3,6 +3,14 @@
 
 ---
 
+## Shameless plug!
+
+https://www.honeypot.io
+
+![Honeypot](https://www.honeypot.io/logo.png)
+
+---
+
 ## Why?
 
 * Elixir/We need it
@@ -69,9 +77,16 @@ Or might just want to contribute to the Ecosystem
 https://docs.travis-ci.com/api
 
 * new mix project
-`mix new travis_ex`
 
-## update the README with what you want to achieve
+```console
+mix new travis_ex
+```
+
+---
+
+## update the README
+
+with what you want to achieve
 
 ```iex
 iex> client = TravisEx.Client.new(auth: "b1568179c33308f4da7dceab")
@@ -171,15 +186,20 @@ and we have a working client library covering one endpoint
 
 ---
 
-## After the basics
+## Whats next?
 
 * Full API coverage
 * Full test coverage (vcr, json_schema)
 * Documentation
 * Maintain it!
 
+---
+
+## After the basics
+
 * Automatic pagination (streams)
 * Handling oauth handshakes
+* ...
 
 ---
 
@@ -187,7 +207,23 @@ and we have a working client library covering one endpoint
 
 Building client libraries automatically from:
   * json schema
-  * from the root of hypermedia API
+  * the root of hypermedia API
+
+---
+
+## TravisEx is out there
+
+* https://github.com/duksis/travis_ex
+* https://hex.pm/packages/travis_ex
+
+---
+
+## Summary
+
+* Spend some time to maintain an existing library
+* Or create and maintain your own.
+
+Lets help each other and make Elixir the next big thing already tomorrow!
 
 ---
 
